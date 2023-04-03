@@ -1,0 +1,20 @@
+digraph BST {
+node [fontname="Arial"]
+edge [fontname="Arial"]
+graph [ordering="out"]
+rankdir=TB
+node [shape=record, style=filled, fillcolor=seashell2, height=.1];
+edge [color=black];
+null [shape=point, width=0];
+node0 [label="<f0> |<f1> 0101010|<f2> "];
+node0:f0 -> null;
+node0:f2 -> null;
+node0001011 [label="<f0> |<f1> 0001011|<f2> "];
+node0101010:f0 -> node0001011:f1;
+node0011111 [label="<f0> |<f1> 0011111|<f2> "];
+node0001011:f2 -> node0011111:f1;
+node1001010 [label="<f0> |<f1> 1001010|<f2> "];
+node0101010:f2 -> node1001010:f1;
+node1101000 [label="<f0> |<f1> 1101000|<f2> "];
+node1001010:f2 -> node1101000:f1;
+}
